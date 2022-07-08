@@ -3,16 +3,61 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    min-height:100vh;
+    background: rgb(50, 7, 51);
+}
 .container{
+    position: relative;
     width: 100%;
     height: 100vh;
-    background: red;
+    overflow: hidden;
+}
+.buble{
+    position: relative;
+    display: flex;
+}
+.buble span{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background: aqua;
+    margin: 0 4px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px blue,
+    0 0 50px aqua,
+    0 0 100px aqua;
+    animation: animate 15s linear infinite;
+    animation-duration: calc(140s/var(--i));
+}
+.buble span:nth-child(even){
+    background: yellow;
+    box-shadow: 0 0 0 10px yellowgreen,
+    0 0 50px pink,
+    0 0 100px pink;
+}
+@keyframes animate{
+    0%{
+        transform: translateY(100vh) scale(0);
+    }
+    100%{
+        transform: translateY(-10vh) scale(1);
+    }
+}
+.container container1{
+    width: 50%;
+    height: 50%;
+    background: white;
     display: flex;
     align-items: center;
     justify-content: center;
 }
+.container1{
+    display: flex;
+    align-items: center;
+}
 form{
-    background: white;
+    background: rgb(12, 201, 214);
     display: flex;
     flex-direction: column;
     padding: 2vw 4vw;
@@ -21,21 +66,21 @@ form{
     border-radius: 10px;
 }
 form h3{
-    color: aquamarine;
+    color: rgb(5, 22, 16);
     font-weight: 800;
     margin-bottom: 20px;
 }
 form input, form textarea{
     border: 0;
-    margin: 10px 0;
-    padding: 20px;
+    margin: 5px 0;
+    padding: 10px;
     outline: none;
-    background: white;
+    background: rgb(255, 255, 255);
     font-size: 16px;
 }
 form button{
     padding:15px;
-    background: yellow;
+    background: rgb(255, 72, 0);
     color: white;
     font-size: 18px;
     border: 0;

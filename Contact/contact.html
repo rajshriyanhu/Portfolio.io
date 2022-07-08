@@ -1,40 +1,91 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Get in Touch</title>
-    <link rel="stylesheet" href="contact.css">
-</head>
-<body>
-    <div class="container0">
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Contact Me</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="contact.css">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <div class="container">
+            <div class="container1">
+                <form onsubmit="sendEmail();reset();return false;">
+                    <h3>Get in Touch</h3>
+                    <input type="text" id="name" placeholder="Your Name" required>
+                    <input type="email" id="email" placeholder="Your Email" required>
+                    <textarea id="message" rows="4" placeholder="Type Your Message"></textarea>
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+            <div class="buble">
+                <span style="--i:11"></span>
+                <span style="--i:12"></span>
+                <span style="--i:24"></span>
+                <span style="--i:10"></span>
+                <span style="--i:14"></span>
+                <span style="--i:23"></span>
+                <span style="--i:18"></span>
+                <span style="--i:16"></span>
+                <span style="--i:19"></span>
+                <span style="--i:20"></span>
+                <span style="--i:22"></span>
+                <span style="--i:25"></span>
+                <span style="--i:18"></span>
+                <span style="--i:21"></span>
+                <span style="--i:15"></span>
+                <span style="--i:13"></span>
+                <span style="--i:26"></span>
+                <span style="--i:17"></span>
+                <span style="--i:13"></span>
+                <span style="--i:28"></span>
+                <span style="--i:11"></span>
+                <span style="--i:12"></span>
+                <span style="--i:24"></span>
+                <span style="--i:10"></span>
+                <span style="--i:14"></span>
+                <span style="--i:23"></span>
+                <span style="--i:18"></span>
+                <span style="--i:16"></span>
+                <span style="--i:19"></span>
+                <span style="--i:20"></span>
+                <span style="--i:22"></span>
+                <span style="--i:25"></span>
+                <span style="--i:18"></span>
+                <span style="--i:21"></span>
+                <span style="--i:15"></span>
+                <span style="--i:13"></span>
+                <span style="--i:26"></span>
+                <span style="--i:17"></span>
+                <span style="--i:13"></span>
+                <span style="--i:28"></span>
+            </div>
+            
+        </div>
         
-    </div>
-    <div class="container">
-        <form onsubmit="sendEmail();reset();return false;">
-            <h3>Get in Touch</h3>
-            <input type="text" id="name" placeholder="Your Name" required>
-            <input type="email" id="email" placeholder="Your Email" required>
-            <textarea id="message" rows="4" placeholder="Type Your Message"></textarea>
-            <button type="submit">Send</button>
-        </form>
-    </div>
-    <script src=" https://smtpjs.com/v3/smtp.js"></script>
-    <script>
-        function sendEmail(){
-            Email.send({
-                secureToken: "3437f6eb-c1d1-4ebe-9077-89fc70b3d93c",
-    To : 'razer.genesis159@gmail.com',
-    From : document.getElementById("email").value,
-    Subject : "New Contact From Enquiry",
-    Body : "Name: " +  document.getElementById("name").value
-    +"<br> Email: " +document.getElementById("email").value
-    +"<br> Message: " +document.getElementById("message").value
-}).then(
-  message => alert("Message sent successfully. Thanks")
-);
-        }
-    </script>
-</body>
+        <script src=" https://smtpjs.com/v3/smtp.js"></script>
+        <script>
+            function sendEmail(){
+                Email.send({
+                    secureToken: "3437f6eb-c1d1-4ebe-9077-89fc70b3d93c",
+        To : 'razer.genesis159@gmail.com',
+        From : document.getElementById("email").value,
+        Subject : "New Contact From Enquiry",
+        Body : "Name: " +  document.getElementById("name").value
+        +"<br> Email: " +document.getElementById("email").value
+        +"<br> Message: " +document.getElementById("message").value
+    }).then(
+      message => alert("Message sent successfully. Thanks")
+    );
+            }
+        </script>
+    </body>
 </html>
