@@ -55,6 +55,9 @@ body{
 .container1{
     display: flex;
     align-items: center;
+    max-width: 600px;
+    padding: 1rem;
+    background: transparent;
 }
 form{
     background: rgb(12, 201, 214);
@@ -89,4 +92,21 @@ form button{
     width: 150px;
     margin: 20px auto 0;
     border-radius: 50px;
+}
+@media(max-width:768px){ 
+    html{
+        font-size: 60%;
+    }
+    .buble span{
+        position: relative;
+        width: 15px;
+        height: 15px;
+        margin: 0 2px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 5px blue,
+    }
+    .buble span:nth-child(even){
+        background: yellow;
+        box-shadow: 0 0 0 5px yellowgreen,
+    }
 }
