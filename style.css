@@ -154,7 +154,7 @@ body::after{
     font-weight: 300;
 }
 
-.container .card .content a{
+.container .card .content .links{
     position: relative;
     display: inline-block;
     padding: 8px 20px;
@@ -225,4 +225,12 @@ hover:contactme{
     box-shadow: 0 0 10px #2196f3, 
     0  0 40px #2196f3,
     0 0 80px #2196f3;
+}
+.social-icon{
+    color: antiquewhite;
+    padding: 1rem;
+    margin: 1rem;
+    display: inline-block;
+    height: 1rem;
+    width: 1rem;
 }
